@@ -1,23 +1,29 @@
+<!-- Authors: Ahmed Alaqad, Nicola Primomo
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENG-513_JavaScript Quiz</title>
+    <title>Trivia Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="quiz-container">
-    <h1>Quiz</h1>
-    <div id="question-container">
-        <p id="question-text"></p>
-        <div id="answers"></div>
+    <div id="quiz-container">
+        <h1>Trivia Quiz</h1>
+        <label for="username" id="username-label">Enter your name:</label>
+        <input type="text" id="username" placeholder="Your name">
+        <hr>
+        <button id="start-quiz">Start Quiz</button>
+        <div id="quiz" style="display: none;">
+            <h2 id="question">Loading...</h2>  
+            <div id="choices"></div>  
+            <p id="correct-answer"></p>
+        </div>
     </div>
-    <button id="submit">Submit Answer</button>
-</div>
-<script src="api.js"></script>
-<script src="quiz.js"></script>
-<script src="generator.js"></script>
-<script src="ui.js"></script>
+    <script src="api.js"></script>
+    <script src="generator.js"></script>
+    <script src="quiz.js"></script>
+    <script src="ui.js"></script>
 </body>
 </html>
